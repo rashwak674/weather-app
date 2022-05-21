@@ -11,67 +11,94 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anek+Odia:wght@100;300;600;800&family=Roboto+Flex:opsz@8..144&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href = "css/main.css">
+    
 </head>
 <body>
-    <main>
-        <h1>WEATHER APP</h1>
-        <section id = "searchBar" class = "searchBar">
+    <main class = "fade-in">
+        <h1 class = "off">WEATHER APP</h1>
+        <section id = "searchBar" class = "searchBar fade-in">
             <form id = "searchBar_command" class = "searchBar_command" role = "search">
-                <label for = "searchBar_text">Search a location</label>
+                <label for = "searchBar_text" class = "off">Search a location</label>
                 <input id = "searchBar_text" class = "searchBar_text" type = "text"
                 role = "searchBox" size = "40" autocomplete = "off" placeholder = "City, State, Country">
-                <button id = "searchBar_button" class = "searchBar_button"
+                <button id = "searchBar_button" class = "searchBar_button button"
                 title = "Enter location" aria-label = "Enter Zip Code or City, State, & Country
                 to receive the designated weather conditions">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <i class="fa-solid fa-sync fa-spin"></i>
+                    <i class="fa-solid fa-sync fa-spin none"></i>
                 </button>
             </form>
         </section>
         <a href = "#currentWeather" class = "skip-link">Skip to Current Weather Conditions</a>
-        <section id = "currentWeather" class = "currentWeather" role = "region"
-        aria-labelledby = "currentweather_location">
+        <section id = "currentWeather" class = "currentWeather fade-in" role = "region"
+        aria-labelledby = "currentWeather_location">
             <h2 id = "currentWeather_location" class = "currentWeather_location"></h2>
-            <div id = "currentWeather_conditions" class = "currentWeather_conditions"></div>
+            <div id = "currentWeather_conditions" class = "currentWeather_conditions">
+                <div class = "icon" id = "icon"><i class = "far fa-sun" aria-hidden = true
+                title = "clear sky"></i></div>
+                <div class = "temp"> <div class = "unit">F</div></div>
+                <div class = "desc"> </div>
+                <div class = "feels"> </div>
+                <div class = "maxTemp"> </div>
+                <div class = "minTemp"> </div>
+                <div class = "humidity"> </div>
+                <div class = "wind"> </div>
+            </div>
         </section>
         <a href = "#dailyForecast" class = "skip-link">Skip to Weekly Forecast</a>
-        <nav id = "navButtons" class = "navButtons">
+        <nav id = "navButtons" class = "navButtons fade-in">
             <button id = "getLocation" class = "button" title = "Get Location" 
             aria-label = "The weather conditions for your current location">
                 <i class="fa-solid fa-location-dot"></i>
-                <i class="fa-solid fa-sync fa-spin"></i>
+                <i class="fa-solid fa-sync fa-spin none"></i>
             </button>
 
             <button id = "home" class = "button" title = "Home Weather" 
             aria-label = "The weather conditions for your current location">
-                <i class="fa-solid fa-house-blank"></i>
-                <i class="fa-solid fa-sync fa-spin"></i>
+                <i class="fa-solid fa-house-chimney"></i>
+                <i class="fa-solid fa-sync fa-spin none"></i>
             </button>
 
             <button id = "save" class = "button" title = "Save Location" 
             aria-label = "The weather conditions for your current location">
                 <i class="fa-solid fa-floppy-disk"></i>
-                <i class="fa-solid fa-sync fa-spin"></i>
+                <i class="fa-solid fa-sync fa-spin none"></i>
             </button>
 
             <button id = "measurements" class = "button" title = "Toggle Measurement Units" 
             aria-label = "The weather conditions for your current location">
                 <i class="fa-solid fa-chart-column"></i>
-                <i class="fa-solid fa-sync fa-spin"></i>
+                <i class="fa-solid fa-sync fa-spin none"></i>
             </button>
 
             <button id = "refresh" class = "button" title = "Refresh Location" 
             aria-label = "The weather conditions for your current location">
                 <i class="fa-solid fa-arrows-rotate"></i>
-                <i class="fa-solid fa-sync fa-spin"></i>
+                <i class="fa-solid fa-sync fa-spin none"></i>
             </button>
 
         </nav>
-        <hr>
-        <section id = "dailyForecast" class = "dailyForecast" role = "region"
+        <hr fade-in>
+        <section id = "dailyForecast" class = "dailyForecast fade-in" role = "region"
         aria-labelledby = "dailyForecast_title">
-            <h2 id = "dailyForecast_title" class = "dailyForecast_title"></h2>
-            <div id = "dailyForecast_content" class = "dailyForecast_content"></div>
+            <h2 id = "dailyForecast_title" class = "dailyForecast_title off"></h2>
+            <div id = "dailyForecast_content" class = "dailyForecast_content">
+                <div class = "forecastDay"><p class = "day">SUN</p><img src = "https://openweathermap.org/img/wn/02d.png"><p
+                class = "High">92</p><p class = "Low">67</p></div>
+                <div class = "forecastDay"><p class = "day">MON</p><img src = "https://openweathermap.org/img/wn/03d.png"><p
+                class = "High">76</p><p class = "Low">59</p></div>
+                <div class = "forecastDay"><p class = "day">TUE</p><img src = "https://openweathermap.org/img/wn/03d.png"><p
+                class = "High">66</p><p class = "Low">53</p></div>
+                <div class = "forecastDay"><p class = "day">WED</p><img src = "https://openweathermap.org/img/wn/03d.png"><p
+                class = "High">68</p><p class = "Low">52</p></div>
+                <div class = "forecastDay"><p class = "day">THU</p><img src = "https://openweathermap.org/img/wn/09d.png"><p
+                class = "High">79</p><p class = "Low">57</p></div>
+                <div class = "forecastDay"><p class = "day">FRI</p><img src = "https://openweathermap.org/img/wn/11d.png"><p
+                class = "High">77</p><p class = "Low">62</p></div>
+                <div class = "forecastDay"><p class = "day">SAT</p><img src = "https://openweathermap.org/img/wn/02d.png"><p
+                class = "High">77</p><p class = "Low">58</p></div>
+            </div>
         </section>
         <p id = "confirmation" class = "offscreen" aria-live = "assertive"></p>
     </main>
