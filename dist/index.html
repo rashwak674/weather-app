@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Odia:wght@100;300;600;800&family=Roboto+Flex:opsz@8..144&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <h1>WEATHER APP</h1>
+        <section id = "searchBar" class = "searchBar">
+            <form id = "searchBar_command" class = "searchBar_command" role = "search">
+                <label for = "searchBar_text">Search a location</label>
+                <input id = "searchBar_text" class = "searchBar_text" type = "text"
+                role = "searchBox" size = "40" autocomplete = "off" placeholder = "City, State, Country">
+                <button id = "searchBar_button" class = "searchBar_button"
+                title = "Enter location" aria-label = "Enter Zip Code or City, State, & Country
+                to receive the designated weather conditions">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-sync fa-spin"></i>
+                </button>
+            </form>
+        </section>
+        <a href = "#currentWeather" class = "skip-link">Skip to Current Weather Conditions</a>
+        <section id = "currentWeather" class = "currentWeather" role = "region"
+        aria-labelledby = "currentweather_location">
+            <h2 id = "currentWeather_location" class = "currentWeather_location"></h2>
+            <div id = "currentWeather_conditions" class = "currentWeather_conditions"></div>
+        </section>
+        <a href = "#dailyForecast" class = "skip-link">Skip to Weekly Forecast</a>
+        <nav id = "navButtons" class = "navButtons">
+            <button id = "getLocation" class = "button" title = "Get Location" 
+            aria-label = "The weather conditions for your current location">
+                <i class="fa-solid fa-location-dot"></i>
+                <i class="fa-solid fa-sync fa-spin"></i>
+            </button>
+
+            <button id = "home" class = "button" title = "Home Weather" 
+            aria-label = "The weather conditions for your current location">
+                <i class="fa-solid fa-house-blank"></i>
+                <i class="fa-solid fa-sync fa-spin"></i>
+            </button>
+
+            <button id = "save" class = "button" title = "Save Location" 
+            aria-label = "The weather conditions for your current location">
+                <i class="fa-solid fa-floppy-disk"></i>
+                <i class="fa-solid fa-sync fa-spin"></i>
+            </button>
+
+            <button id = "measurements" class = "button" title = "Toggle Measurement Units" 
+            aria-label = "The weather conditions for your current location">
+                <i class="fa-solid fa-chart-column"></i>
+                <i class="fa-solid fa-sync fa-spin"></i>
+            </button>
+
+            <button id = "refresh" class = "button" title = "Refresh Location" 
+            aria-label = "The weather conditions for your current location">
+                <i class="fa-solid fa-arrows-rotate"></i>
+                <i class="fa-solid fa-sync fa-spin"></i>
+            </button>
+
+        </nav>
+        <hr>
+        <section id = "dailyForecast" class = "dailyForecast" role = "region"
+        aria-labelledby = "dailyForecast_title">
+            <h2 id = "dailyForecast_title" class = "dailyForecast_title"></h2>
+            <div id = "dailyForecast_content" class = "dailyForecast_content"></div>
+        </section>
+        <p id = "confirmation" class = "offscreen" aria-live = "assertive"></p>
+    </main>
+</body>
+</html>
